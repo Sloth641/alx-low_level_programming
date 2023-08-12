@@ -4,7 +4,7 @@
 /**
  * main - Entry Point
  *
- *Description: a C program that checks if last digit of random number is >5 or <5 or 0
+ *Description: a C program that checks if last digit of rnd no. is <=>5
  *
  *Return: Always 0 (Sucess)
 */
