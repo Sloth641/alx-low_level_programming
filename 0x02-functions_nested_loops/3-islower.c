@@ -4,7 +4,7 @@
  *
  *@c: input char for fn
  *
- * Return: returns 1 if lowercase, otherwise returns 1
+ * Return: returns 1 if lowercase, otherwise returns 0
  *
 */
 int _islower(int c)
