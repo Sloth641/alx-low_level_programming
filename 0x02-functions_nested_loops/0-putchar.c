@@ -1,13 +1,18 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * main - Entry Point
  *
- *Description: a C program that return 0
+ *Description: a C program that prints using custome fn
  *
  *Return: Always 0 (Sucess)
 */
 int main(void)
 {
-	printf("_putchar\n");
+	char arr[9] = "_putchar\n";
+
+	for (int i = 0; i < 9; i++)
+	{
+		_putchar(arr[i]);
+	}
 	return (0);
 }
