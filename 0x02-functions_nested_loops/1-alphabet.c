@@ -1,10 +1,7 @@
 #include "main.h"
 /**
- * main - Entry Point
+ *print_alphabet - prints the alpahbet charchters
  *
- *Description: a C program that prints using custome fn
- *
- *Return: Always 0 (Sucess)
 */
 void print_alphabet(void)
 {
