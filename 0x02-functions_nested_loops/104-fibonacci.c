@@ -16,11 +16,12 @@ int main(void)
 	{
 		sum = f1 + f2;
 		if (sum > 4000000)
-			break;
-		if ((sum % 2) == 0)
-			totalSum += sum;
+		       break;
+		if((sum % 2) == 0)
+			totalSum += sum;	
 		f1 = f2;
 		f2 = sum;
+		
 	}
 	printf("%.0f\n", totalSum);
 	return (0);
