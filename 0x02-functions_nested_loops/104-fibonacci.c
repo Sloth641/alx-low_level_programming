@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * num_Length - Entry Point
+ * num_length - function that calc length of number
  *
  *@num: a C program that prints using custome fn
  *
