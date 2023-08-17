@@ -3,12 +3,12 @@
 
 /**
  * main - Entry Point
- * 
+ *
  * Description: Print Largest Prime Number of of the number 612852475143
- * 
+ *
  * Return: 0 (success)
  */
-int main (void)
+int main(void)
 {
 	long int n = 1231952;
 	long int i, maxPrime;
@@ -30,7 +30,7 @@ int main (void)
 		while (n % i == 0)
 		{
 			maxPrime = i;
-			n = n/i;
+			n = n / i;
 		}
 	}
 	if (n > 2)
