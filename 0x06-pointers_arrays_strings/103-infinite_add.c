@@ -7,6 +7,8 @@
  * @n2: input for fn
  * @r: input for fn
  * @size_r: input for fn
+ *
+ * Return: pointer to new string
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
@@ -38,7 +40,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		if (ls + 2 > size_r)
 			return (0);
 		while (ls-- >= 0)
-			r[ls +1] = r[ls];
+			r[ls + 1] = r[ls];
 		r[0] = carry + '0';
 	}
 	return (r);
