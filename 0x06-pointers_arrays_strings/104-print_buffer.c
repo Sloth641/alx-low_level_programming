@@ -77,7 +77,7 @@ void print_buffer(char *b, int size)
 	{
 		for (s = 0; s < size; s += 10)
 		{
-			e = (s - start < 10) ? size - s : 10;
+			e = (size - s < 10) ? size - s : 10;
 			printf("%08x: ", s);
 			printx(b, s, e);
 			printa(b, s, e);
