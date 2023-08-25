@@ -14,7 +14,7 @@ int isSep(char c)
 	/*space, tabulation, new line,;.!?\"(){}*/
 	char del[] = " \t\n,;.!?\"(){}";
 
-	for (j = 0; del[j] != '\0'; j++)
+	for (j = 0; j < 13; j++)
 	{
 		if (c  == del[j])
 			return (1);
