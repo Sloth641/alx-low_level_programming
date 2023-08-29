@@ -25,9 +25,13 @@ unsigned int _strspn(char *s, char *accept)
 			}
 		}
 		if (flag != 1)
+		{
 			break;
+		}
 		else
+		{
 			count++;
+		}
 	}
 	return (count);
 }
