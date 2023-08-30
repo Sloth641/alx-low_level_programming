@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * factorial -  calculates the value of x raised to the power of y.
+ *  _pow_recursion -  calculates the value of x raised to the power of y.
  *
  * @x: base
  * @y: power
