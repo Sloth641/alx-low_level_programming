@@ -12,7 +12,7 @@
 int is_prime(int n, int div)
 {
 	if (div >= n && n > 1)
-                return (1);
+		return (1);
 	else if (n % div == 0 || n <= 1)
 		return (0);
 	else
