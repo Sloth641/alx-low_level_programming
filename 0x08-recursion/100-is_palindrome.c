@@ -10,13 +10,13 @@
  */
 int _strlen(char *s)
 {
-        int len = 0;
+	int len = 0;
 
-        if (*s > '\0')
-        {
-                len += _strlen(s + 1) + 1;
-        }
-        return (len);
+	if (*s > '\0')
+	{
+		len += _strlen(s + 1) + 1;
+	}
+	return (len);
 }
 
 /**
@@ -41,7 +41,7 @@ int is_right_equals_left(char *s, int start, int end, int mid)
 }
 
 /**
- * is_prime_number -  checks if a string is a palindrome.
+ * is_palindrome -  checks if a string is a palindrome.
  *
  * @s: input string
  *
