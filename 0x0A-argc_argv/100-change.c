@@ -22,7 +22,10 @@ int main(int argc, char *argv[])
 	{
 		change = atoi(argv[1]);
 		if (change < 0)
+		{
 			printf("0\n");
+			return (0);
+		}
 		else
 		{
 			for (i = 0; i < 5; i++)
