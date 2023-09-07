@@ -50,7 +50,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (n <= size2)
 		n = size2;
-	for (i = 0; i < n + size1; i++)
+	for (i = 0; i <= n + size1; i++)
 	{
 		if (i < size1)
 		{
