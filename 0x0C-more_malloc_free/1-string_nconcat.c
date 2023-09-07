@@ -31,7 +31,7 @@ int _strlen(char *str)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	unsigned int i, size1, size2;
+	unsigned int i, j, size1, size2;
 
 	if (s1 == NULL)
 		s1 = "";
@@ -50,16 +50,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (n <= size2)
 		n = size2;
-	for (i = 0; i <= n + size1; i++)
+	for (i = 0; i < size1; i++)
 	{
-		if (i < size1)
-		{
-			ptr[i] = s1[i];
-		}
-		else
-		{
-			ptr[i] = s2[i - size1];
-		}
+		ptr[i] = s1[i];
+	}
+	for (j = 0l i < n; j++)
+	{
+		ptr[i] = s2[j];
+		i++;
 	}
 	ptr[i] = '\0';
 	return (ptr);
