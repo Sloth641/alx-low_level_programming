@@ -31,13 +31,15 @@ int _strlen(char *str)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	unsigned int i, size1 = _strlen(s1), size2 = _strlen(s2);
+	unsigned int i, size1, size2;
 
-	if (size1 <= 0 || size2 <= 0 || n <= 0)
-	{
-		return (NULL);
-	}
-	ptr = malloc(sizeof(char) * (size1 + size2));
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	size1 = _strlen(s1);
+	size2 = _strlen(s2);
+	ptr = malloc(sizeof(char) * (size1 + size2) + 1);
 	if (ptr == NULL)
 	{
 		return (NULL);
