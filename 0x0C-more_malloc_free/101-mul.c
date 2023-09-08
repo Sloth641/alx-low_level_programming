@@ -75,11 +75,15 @@ void print_number(int n)
 /**
  * main - check the code for
  *
+ * @argc: number of args
+ * @argv: array of strings of args
+ *
  * Return: Always 0.
  */
 int main(int argc, char *argv[])
 {
 	int firstNum = 0, secNum = 0, mul = 0;
+
 	if (argc != 3)
 	{
 		_puts("Error");
