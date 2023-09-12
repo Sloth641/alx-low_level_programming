@@ -1,4 +1,24 @@
+#include <stdlib.h>
 #include "dog.h"
+
+/**
+ * _strlen - calcualtes the length of a string.
+ *
+ * @s: pointer to int
+ *
+ * Return: returns the length of a string as integer.
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+
+	return (i);
+}
 
 /**
  * _strcpy - copies a string into anotherone.
@@ -30,12 +50,38 @@ char *_strcpy(char *dest, char *src)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t doggy = {NULL, 0, NULL};
-	dog_t *d;
-	doggy.name = _strcpy(doggy.name, name);
-	doggy.age = age;
-	doggy.owner = _strcpy(doggy.owner, owner);
+	dog_t *doggy;
 
-	d = &doggy;
-	return (d);
+	if (name == NULL || age < 0 || owner == NULL)
+	{
+		return (NULL);
+	}
+
+	doggy = (dog_t *)malloc(sizeof(dog_t));
+	if (doggy == NULL)
+	{
+		return (NULL);
+	}
+	else
+	{
+		doggy->name = malloc(sizeof(char) * _strlen(name) + 1);
+		if (doggy->name == NULL)
+		{
+			free(doggy);
+			return (NULL);
+		}
+		doggy->owner = malloc(sizeof(char) * _strlen(owner) + 1);
+		if (doggy->owner == NULL)
+		{
+			free(doggy->name);
+			free(doggy);
+			return (NULL);
+		}
+
+		doggy->name = _strcpy(doggy->name, name);
+		doggy->age = age;
+		doggy->owner = _strcpy(doggy->owner, owner);
+
+		return (doggy);
+	}
 }
