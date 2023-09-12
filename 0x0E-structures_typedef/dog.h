@@ -3,7 +3,7 @@
 
 #define NULL ((void *)0)
 
-typdef struct dog dog_t
+typdef struct dog dog_t;
 
 /**
  * struct dog - doggy dog
