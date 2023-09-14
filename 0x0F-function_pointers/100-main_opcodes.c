@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 		exit(2);
 	}
 
-	while(c--)
+	while (c--)
 	{
 		printf("%02hhx%s", *ptr, c ? " " : "\n");
 		ptr++;
