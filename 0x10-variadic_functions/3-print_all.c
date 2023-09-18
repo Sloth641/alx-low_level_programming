@@ -3,7 +3,7 @@
 /**
  * print_all - prints anything
  *
- * @formt: type of arg
+ * @format: type of arg
  * @...: args
  *
  * Return: sum of args.
