@@ -1,6 +1,6 @@
 #include "variadic_functions.h"
 /**
- * print_numbers - prints numbers
+ * print_strings - prints strings
  *
  * @separator: input
  * @n: num of arg
@@ -8,19 +8,25 @@
  *
  * Return: nothing.
  */
-oid print_strings(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	va_list param;
+	char *str;
 
 	if (n <= 0)
 	{
+		printf("\n");
 		return;
 	}
 	va_start(param, n);
 	for (i = 0; i < n; i++)
 	{
-		printf("%d", va_arg(param, int));
+		str = va_arg(param, char *);
+		if(str == NULL)
+			printf("(nil)");
+		else
+			printf("%s", str);
 		if (separator != NULL && i != n - 1)
 			printf("%s", separator);
 	}
