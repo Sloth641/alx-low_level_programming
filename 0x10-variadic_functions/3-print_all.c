@@ -16,31 +16,34 @@ void print_all(const char * const format, ...)
 	va_list param;
 
 	va_start(param, format);
-	while (format[i] != '\0')
+	if (format)
 	{
-		switch (format[i])
+		while (format[i] != '\0')
 		{
-			case 'c':
-				printf("%s%c", s, va_arg(param, int));
-				break;
-			case 'i':
-				printf("%s%d", s, va_arg(param, int));
-				break;
-			case 'f':
-				printf("%s%f", s, va_arg(param, double));
-				break;
-			case 's':
-				str = va_arg(param, char *);
-				if (str == NULL)
-					str = "(nil)";
-				printf("%s%s", s, str);
-				break;
-			default:
-				i++;
-				continue;
+			switch (format[i])
+			{
+				case 'c':
+					printf("%s%c", s, va_arg(param, int));
+					break;
+				case 'i':
+					printf("%s%d", s, va_arg(param, int));
+					break;
+				case 'f':
+					printf("%s%f", s, va_arg(param, double));
+					break;
+				case 's':
+					str = va_arg(param, char *);
+					if (str == NULL)
+						str = "(nil)";
+					printf("%s%s", s, str);
+					break;
+				default:
+					i++;
+					continue;
+			}
+			s = ", ";
+			i++;
 		}
-		s = ", ";
-		i++;
 	}
 	printf("\n");
 	va_end(param);
