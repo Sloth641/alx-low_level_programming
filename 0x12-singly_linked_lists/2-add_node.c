@@ -19,7 +19,7 @@ int _strlen(const char *s)
 	return (i);
 }
 /**
- * add_note - adds a new node at the beginning of a list_t list.
+ * add_node - adds a new node at the beginning of a list_t list.
  *
  * @head: pointer to list_t.
  * @str: pointer to string.
