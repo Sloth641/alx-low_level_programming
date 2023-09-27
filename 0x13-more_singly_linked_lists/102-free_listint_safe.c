@@ -6,7 +6,7 @@
  *
  * Return: new list
  */
-listint_t *find_listint_loop(listint_t *head)
+listint_t *find_listint_loop_cp(listint_t *head)
 {
 	listint_t *cur, *last;
 
@@ -20,7 +20,7 @@ listint_t *find_listint_loop(listint_t *head)
 		{
 			return(last);
 		}
-		for (cur = head; cur != NULL; cur = cur->next)
+		for (cur = head; cur != last; cur = cur->next)
 		{
 			if (cur == last->next)
 			{
@@ -47,7 +47,7 @@ size_t free_listint_safe(listint_t **h)
 	{
 		return (0);
 	}
-	loopn = find_listint_loop(*h);
+	loopn = find_listint_loop_cp(*h);
 	for (ln = 0; (*h != loopn || loop) && *h != NULL; *h = next)
 	{
 		ln++;

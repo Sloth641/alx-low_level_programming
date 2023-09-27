@@ -1,12 +1,12 @@
 #include "lists.h"
 /**
- * find_listint_loop - helper fun
+ * find_listint_loop - finds the loop in a linked list.
  *
  * @head: pointer to list
  *
  * Return: new list
  */
-listint_t *find_listint_loop(const listint_t *head)
+listint_t *find_listint_loop(listint_t *head)
 {
 	listint_t *cur, *last;
 
@@ -20,7 +20,7 @@ listint_t *find_listint_loop(const listint_t *head)
 		{
 			return (last);
 		}
-		for (cur = head; cur != NULL; cur = cur->next)
+		for (cur = head; cur != last; cur = cur->next)
 		{
 			if (cur == last->next)
 			{
