@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * find_listint_loop - helper fun
+ * find_listint_loop_cp - helper fun
  *
  * @head: pointer to list
  *
@@ -18,7 +18,7 @@ listint_t *find_listint_loop_cp(listint_t *head)
 	{
 		if (last == last->next)
 		{
-			return(last);
+			return (last);
 		}
 		for (cur = head; cur != last; cur = cur->next)
 		{
