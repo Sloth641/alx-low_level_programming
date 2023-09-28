@@ -1,11 +1,13 @@
 #include "main.h"
 /**
- * clear_bit - sets the value of a bit to 1 at a given index.
+ * flip_bits - calculates the number of bits you would need to flip 
+ * to get from one number to another.
  *
  * @n: input decimal number
- * @index: no. bit required
+ * @m: input decimal number
  *
- * Return: the bit required.
+ * Return: number of bits you would need to flip 
+ * to get from one number to another.
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
