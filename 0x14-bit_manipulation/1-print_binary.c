@@ -1,14 +1,15 @@
 #include "main.h"
 /**
- * binary_to_uint -  converts a binary number to an unsigned int.
+ * print_binary -  prints the binary representation of a number.
  *
- * @b: input string
+ * @n: input decimal
  *
- * Return: the converted number, or 0 if failed.
+ * Return: Nothing.
  */
 void print_binary(unsigned long int n)
 {
 	int bit = sizeof(n) * 8, printed = 0;
+
 	while (bit)
 	{
 		if (n & 1L << --bit)
