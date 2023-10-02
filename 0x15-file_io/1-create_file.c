@@ -44,5 +44,5 @@ int create_file(const char *filename, char *text_content)
 		n = write(ff, text_content, length);
 	}
 	close(ff);
-	return (n == lenght ? 1 : -1);
+	return (n == length ? 1 : -1);
 }
