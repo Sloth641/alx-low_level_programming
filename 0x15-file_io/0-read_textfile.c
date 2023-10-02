@@ -13,7 +13,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	ssize_t n;
 	char text[1000];
 
-	if (!filename|| !letters)
+	if (filename == NULL || letters <= 0)
 	{
 		return (0);
 	}
@@ -22,8 +22,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	{
 		return (0);
 	}
-	n = read(ff, (void *)text, letters);
-	n = write(STDOUT_FILENO, (void *)text, n);
+	n = read(ff, &text[0], letters);
+	n = write(STDOUT_FILENO, &text[0], n);
 	close(ff);
 	return (n);
 }
