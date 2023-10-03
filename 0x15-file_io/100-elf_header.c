@@ -158,7 +158,8 @@ void p_osabi_more(Elf64_Ehdr hd)
  */
 void p_abiversion(Elf64_Ehdr hd)
 {
-	printf("  ABI Version:                       %d\n", hd.e_ident[EI_ABIVERSION]);
+	printf("  ABI Version:                       %d\n",
+			hd.e_ident[EI_ABIVERSION]);
 }
 /**
  * p_type - prints ELF type
