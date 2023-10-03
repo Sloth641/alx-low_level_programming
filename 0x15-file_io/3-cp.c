@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
 /**
  * main - check the code
@@ -13,7 +11,7 @@ int main(int ac, char **av)
 {
 	int ff1 = 0, ff2 = 0;
 	ssize_t n;
-	char text[1024];
+	char text[1025];
 
 	if (ac != 3)
 	{
