@@ -48,7 +48,7 @@ int main(int ac, char **av)
 	}
 	if (ff2)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", ff1), exit(100);
+		dprintf(2, "Error: Can't close fd %d\n", ff2), exit(100);
 	}
-	return (0);
+	return (EXIT_SUCCESS);
 }
