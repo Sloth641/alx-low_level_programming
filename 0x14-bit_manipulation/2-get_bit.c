@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * get_bit -  prints the binary representation of a number.
+ * get_bit -  Function prints the binary representation of a number.
  *
  * @n: input decimal number
  * @index: no. bit required
