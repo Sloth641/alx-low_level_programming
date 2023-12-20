@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - check the code
+ * main - Copy from file to file
  *
  * @ac: argc
  * @av: argv
