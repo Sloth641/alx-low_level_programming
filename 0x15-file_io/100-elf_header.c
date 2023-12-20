@@ -231,7 +231,7 @@ void p_entry(Elf64_Ehdr hd)
 	}
 }
 /**
- * main - check the code
+ * main - display elf part of a file
  *
  * @ac: argc
  * @av: argv
