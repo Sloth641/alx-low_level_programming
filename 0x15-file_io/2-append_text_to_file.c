@@ -21,7 +21,7 @@ int _strlen(char *s)
 	return (i);
 }
 /**
- * append_text_to_file - appends text at the end of a file.
+ * append_text_to_file - A Function appends text at the end of a file.
  *
  * @filename: pointer to file.
  * @text_content: pointer to string.
